@@ -6,7 +6,9 @@ namespace Tests {
 		const string ValidName = "userName";
 		const string ValidPassword = "passwd";
 
-		// 2/4 mutants survived when only these tests enabled
+		// UPDATE: Latest version from master is works as expected
+		
+		// Some mutants survived when only these tests enabled
 		// but manually proposed changes fails:
 		
 		// [Survived] Binary expression mutation on line 13: 
@@ -30,6 +32,18 @@ namespace Tests {
 		void IsUnauthorizedUserGetsException() {
 			var repo = new Repository<string>(new Auth(ValidName, ValidPassword), "secret");
 			Assert.Throws<AccessDeniedException>(() => repo.GetData("AnotherUser", "AnotherPassword"));
+		}
+
+		[Fact]
+		void IsUserWithoutCorrectPasswordGetsException() {
+			var repo = new Repository<string>(new Auth(ValidName, ValidPassword), "secret");
+			Assert.Throws<AccessDeniedException>(() => repo.GetData(ValidName, "AnotherPassword"));
+		}
+
+		[Fact]
+		void IsUserWithoutCorrectNameGetsException() {
+			var repo = new Repository<string>(new Auth(ValidName, ValidPassword), "secret");
+			Assert.Throws<AccessDeniedException>(() => repo.GetData("AnotherUser", ValidPassword));
 		}
 
 		[Fact]
