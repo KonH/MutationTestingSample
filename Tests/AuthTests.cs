@@ -6,21 +6,6 @@ namespace Tests {
 		const string ValidName = "userName";
 		const string ValidPassword = "passwd";
 
-		// UPDATE: Latest version from master is works as expected
-		
-		// Some mutants survived when only these tests enabled
-		// but manually proposed changes fails:
-		
-		// [Survived] Binary expression mutation on line 13: 
-		// 'IsPublic || ((name == WantedName) && (password == WantedPassword))' 
-		//==>
-		// 'IsPublic && ((name == WantedName) && (password == WantedPassword))'
-		
-		// [Survived] Binary expression mutation on line 13:
-		//'(name == WantedName) && (password == WantedPassword)'
-		// ==>
-		// '(name == WantedName) || (password == WantedPassword)'
-
 		[Fact]
 		void IsAuthorizedUserGetsData() {
 			var repo = new Repository<string>(new Auth(ValidName, ValidPassword), "secret");

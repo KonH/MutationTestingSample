@@ -1,0 +1,3 @@
+[submodule "stryker-net"]
+	path = stryker-net
+	url = https://github.com/KonH/stryker-net.git
