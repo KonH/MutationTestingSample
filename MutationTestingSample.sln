@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{96472954-6638-42AB-8626-84D496579050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.csproj", "{96472954-6638-42AB-8626-84D496579050}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{18DF5BCE-F17C-4CB5-9DB4-77FA5E93B69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{3E1266CF-A984-451C-A6E2-F8549139AA4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{3E1266CF-A984-451C-A6E2-F8549139AA4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stryker.Core", "stryker-net\src\Stryker.Core\Stryker.Core\Stryker.Core.csproj", "{8807B7E4-67DC-4502-8FED-A3D3D0D0FFF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stryker.Core.UnitTest", "stryker-net\src\Stryker.Core\Stryker.Core.UnitTest\Stryker.Core.UnitTest.csproj", "{13B33D16-F974-47AF-9244-7EE995037AC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stryker.CLI", "stryker-net\src\Stryker.CLI\Stryker.CLI\Stryker.CLI.csproj", "{EB5FCBB5-34CC-42DC-90F9-E548522901E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stryker.CLI.UnitTest", "stryker-net\src\Stryker.CLI\Stryker.CLI.UnitTest\Stryker.CLI.UnitTest.csproj", "{42D2E55E-1B3B-40F2-8E7E-60807259BEB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +25,26 @@ Global
 		{96472954-6638-42AB-8626-84D496579050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96472954-6638-42AB-8626-84D496579050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96472954-6638-42AB-8626-84D496579050}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18DF5BCE-F17C-4CB5-9DB4-77FA5E93B69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18DF5BCE-F17C-4CB5-9DB4-77FA5E93B69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18DF5BCE-F17C-4CB5-9DB4-77FA5E93B69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18DF5BCE-F17C-4CB5-9DB4-77FA5E93B69B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E1266CF-A984-451C-A6E2-F8549139AA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E1266CF-A984-451C-A6E2-F8549139AA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E1266CF-A984-451C-A6E2-F8549139AA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E1266CF-A984-451C-A6E2-F8549139AA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8807B7E4-67DC-4502-8FED-A3D3D0D0FFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8807B7E4-67DC-4502-8FED-A3D3D0D0FFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8807B7E4-67DC-4502-8FED-A3D3D0D0FFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8807B7E4-67DC-4502-8FED-A3D3D0D0FFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B33D16-F974-47AF-9244-7EE995037AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B33D16-F974-47AF-9244-7EE995037AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B33D16-F974-47AF-9244-7EE995037AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B33D16-F974-47AF-9244-7EE995037AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5FCBB5-34CC-42DC-90F9-E548522901E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5FCBB5-34CC-42DC-90F9-E548522901E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5FCBB5-34CC-42DC-90F9-E548522901E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5FCBB5-34CC-42DC-90F9-E548522901E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D2E55E-1B3B-40F2-8E7E-60807259BEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D2E55E-1B3B-40F2-8E7E-60807259BEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D2E55E-1B3B-40F2-8E7E-60807259BEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D2E55E-1B3B-40F2-8E7E-60807259BEB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

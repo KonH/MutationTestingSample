@@ -1,9 +1,9 @@
 ﻿{
   "stryker-config": {
 	"reporter": "Console",
-	"logConsole": "debug",
-	"timeoutMS": 10000,
-	"logFile": true,
-	"projectName": "Tests.csproj"
+	"log-console": "debug",
+	"timeout-ms": 10000,
+	"log-file": true,
+	"project-name": "Tests.csproj"
   }
 }
